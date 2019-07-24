@@ -29,7 +29,7 @@ phases:
       # - command
   post_build:
     commands:
-      - echo "Quyencao123" | docker login -u "quyencm" --password-stdin
+      - echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin
       - docker push quyencm/client
 #artifacts:
   #files:
